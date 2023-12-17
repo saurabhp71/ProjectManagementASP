@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Project_management.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 115%;
+            height: 370px;
+            margin-bottom: 50px;
+            margin-right: 0px;
+        }
+        .auto-style2 {
+            height: 104px;
+            background-color: lightpink;
+            
+        }
+        .auto-style3 {
+            height: 31px;
+            background-color: cornflowerblue;
+        }
+        .auto-style5 {
+            width: 1455px;
+            height: 191px;
+            margin-right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table class="auto-style1">
+        <tr>
+            <td class="auto-style2">
+                <img alt="" class="auto-style5" src="Content/Image/admin.jpg" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style3">
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text="All Project" Value="All Project" NavigateUrl="~/AllProject.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Asign Project.aspx" Text="Asign Project" Value="Asign Project"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/CompletedProject.aspx" Text="Completed Project" Value="Completed Project"></asp:MenuItem>
+                    </Items>
+                    <StaticMenuItemStyle HorizontalPadding="30px" ItemSpacing="10px" VerticalPadding="10px" />
+                </asp:Menu>
+            </td>
+        </tr>
+        <tr>
+            <td>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <p>
+                    <br />
+                </p>
+            </asp:ContentPlaceHolder>
+        </div>
+            </td>
+        </tr>
+    </table>
+    </form>
+    </body>
+</html>

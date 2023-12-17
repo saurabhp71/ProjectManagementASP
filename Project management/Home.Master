@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="Project_management.Home" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style2 {
+            height: 294px;
+            width: 998px;
+        }
+        .auto-style3 {
+            height: 75px;
+            background-color:lightpink;
+            width: 998px;
+        }
+        .auto-style4 {
+            background-color: orange;
+            text-align: center;
+            width: 998px;
+        }
+        .auto-style6 {
+            width: 998px;
+        }
+        .auto-style7 {
+            width: 1251px;
+        }
+        .auto-style8 {
+            width: 1271px;
+            height: 193px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="auto-style7">
+            <tr>
+                <td class="auto-style4">
+                    <img alt="" class="auto-style8" src="Content/Image/project-management.jpg" /></td>
+            </tr>
+            <tr>
+                <td class="auto-style3">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="About" Value="About"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Registration.aspx" Text="Registration" Value="Registration">
+                                <asp:MenuItem NavigateUrl="~/Employee.aspx" Text="Employee" Value="Employee"></asp:MenuItem>
+                                <asp:MenuItem Text="Project" Value="Project" NavigateUrl="~/Project.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Login" Value="Login" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                        </Items>
+                        <StaticMenuItemStyle HorizontalPadding="30px" ItemSpacing="10px" VerticalPadding="10px" />
+                        <StaticMenuStyle HorizontalPadding="30px" VerticalPadding="10px" />
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style6">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style6">&nbsp;</td>
+            </tr>
+        </table>
+        <div>
+        </div>
+    </form>
+</body>
+</html>
